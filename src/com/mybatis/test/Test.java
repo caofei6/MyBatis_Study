@@ -13,7 +13,7 @@ import com.mybatis.model.User;
 public class Test{
 	
 	public static void main(String[] args) throws IOException{
-/*		String resource = "/com/mybatis/util/conf.xml";
+/*		String resource = "/conf.xml";
 		InputStream inputStream = Test.class.getResourceAsStream(resource);
 		SqlSessionFactory sessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		SqlSession session = sessionFactory.openSession();
@@ -25,5 +25,16 @@ public class Test{
 		TestCRUDByXmlMapper testCRUD = new TestCRUDByXmlMapper();
 		testCRUD.testDelete();
 		testCRUD.testGetAll();
+		testCRUD.testGetUser(1);
+		
+	/*	TestCRUDByAnnotationMapper test = new TestCRUDByAnnotationMapper();
+		test.testGetAll();*/
+		/*test.testGetUser(1);
+		test.testAdd();
+		test.testGetUser(1);
+		test.testAdd();
+		test.testGetAll();*/
+	/*	test.testUpdate();
+		test.testGetAll();*/
 	}
 }

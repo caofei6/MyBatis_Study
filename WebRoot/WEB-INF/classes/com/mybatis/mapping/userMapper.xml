@@ -6,7 +6,7 @@
  
 <mapper namespace="com.mybatis.mapping.userMapper">
 	<!-- 查询用户(select) -->
-	<select id="getUser" parameterType="int" resultType="com.mybatis.model.User">
+	<select id="getUser" parameterType="int" resultType="User">
 		select * from users where ID=#{id}
 	</select>
 	<!-- 

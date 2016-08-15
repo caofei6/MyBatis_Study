@@ -31,6 +31,14 @@ public class TestCRUDByXmlMapper {
 		System.out.println(retResult);	
 	}
 	
+	public void testGetUser(int id){
+		SqlSession sqlSession = MyBatisUtil.getSqlSession(true);
+		String statement = "com.mybatis.mapping.userMapper.getUser";
+		User user = sqlSession.selectOne(statement, id);
+		
+		sqlSession.close();
+		System.out.println(user);
+	}
 	public void testUpdate(){
 		SqlSession sqlSession = MyBatisUtil.getSqlSession(true);
 		/**
